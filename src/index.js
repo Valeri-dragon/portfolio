@@ -1,0 +1,14 @@
+import tabs from "./modules/tabs";
+import modal from "./modules/modal";
+import menu from "./modules/menu";
+import accordeon from "./modules/accordeon";
+import timer from "./modules/timer";
+import scroll from "./modules/scroll";
+import sendForm from "./modules/sendForm";
+tabs();
+modal();
+menu();
+accordeon();
+timer();
+scroll();
+sendForm();
