@@ -19,7 +19,7 @@ const timer = () => {
   
     const days = Math.floor(roundHours / 24);
     
-    const nigthHours = roundHours % 60  - 36;
+    const nigthHours = roundHours/60/60%24;
 
       const formatHours = nigthHours < 10 ? "0" + nigthHours : nigthHours;
       const formatmin = minutes < 10 ? "0" + minutes : minutes;

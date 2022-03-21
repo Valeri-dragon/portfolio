@@ -1,6 +1,6 @@
 const tabs = () => {
   const blockTabsBtns = document.querySelector(".design-list");
-
+  document.title = `Разработка сайтов`;
   const getConditionTabBtn = () => {
     const tabsBtn = document.querySelectorAll(".design-list__item");
     tabsBtn.forEach((item) => {
@@ -14,9 +14,16 @@ const tabs = () => {
   const showElemBlockDesign = () => {
     const blockDesign = document.querySelector(".design-wrapper");
     const itemBlockDesign = blockDesign.querySelectorAll("[data-tabs-field]");
+    const title = document.querySelectorAll(".design__title");
     itemBlockDesign.forEach((item) => {
       if (item.classList.contains("hidden")) {
         item.classList.remove("hidden");
+
+        title.forEach((elemTit) => {
+          if (item == elemTit) {
+            document.title = elemTit.innerText;
+          }
+        });
       } else {
         item.classList.add("hidden");
       }
